@@ -234,37 +234,52 @@ def main():
             
             ious_bl = [iou_pair(masks_b[i], masks_l[i]) for i in range(len(dets))]
 
-            # 可視化（シンプル版）
+            # カラーマップを生成（各オブジェクトに異なる色を割り当て）
+            np.random.seed(42)  # 再現性のためシード固定
+            colors = []
+            for i in range(len(dets)):
+                # HSV色空間で均等に分布した色を生成
+                hue = int(180 * i / max(len(dets), 1))
+                color_hsv = np.array([[[hue, 255, 255]]], dtype=np.uint8)
+                color_bgr = cv2.cvtColor(color_hsv, cv2.COLOR_HSV2BGR)[0, 0]
+                colors.append(tuple(int(c) for c in color_bgr))
+            
+            # 可視化（改良版 - 各オブジェクトに異なる色）
             viz_b = img_bgr.copy()
             viz_l = img_bgr.copy()
             
             for i, (mask_b, mask_l, label) in enumerate(zip(masks_b, masks_l, labels)):
+                # 同じオブジェクトには同じ色を使用（Base+とLargeで統一）
+                color = colors[i]
+                
                 # Base+の可視化
-                color_b = (0, 255, 0)  # 緑
                 mask_rgb_b = np.zeros_like(viz_b)
                 mask_b_bool = mask_b.astype(bool)
-                mask_rgb_b[mask_b_bool] = color_b
+                mask_rgb_b[mask_b_bool] = color
                 viz_b = cv2.addWeighted(viz_b, 0.7, mask_rgb_b, 0.3, 0)
                 
                 # Largeの可視化
-                color_l = (0, 0, 255)  # 赤
                 mask_rgb_l = np.zeros_like(viz_l)
                 mask_l_bool = mask_l.astype(bool)
-                mask_rgb_l[mask_l_bool] = color_l
+                mask_rgb_l[mask_l_bool] = color
                 viz_l = cv2.addWeighted(viz_l, 0.7, mask_rgb_l, 0.3, 0)
                 
                 # ラベルを追加
                 ys, xs = np.where(mask_b_bool)
                 if xs.size > 0 and ys.size > 0:
                     x1, y1 = int(xs.min()), int(ys.min())
-                    cv2.putText(viz_b, label, (x1, y1-5), 
-                               cv2.FONT_HERSHEY_SIMPLEX, 0.5, color_b, 2)
+                    # 白背景に黒文字で見やすくする
+                    cv2.rectangle(viz_b, (x1, y1-20), (x1 + len(label)*8, y1-5), (255, 255, 255), -1)
+                    cv2.putText(viz_b, label, (x1, y1-8), 
+                               cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 0), 1, cv2.LINE_AA)
                 
                 ys, xs = np.where(mask_l_bool)
                 if xs.size > 0 and ys.size > 0:
                     x1, y1 = int(xs.min()), int(ys.min())
-                    cv2.putText(viz_l, label, (x1, y1-5), 
-                               cv2.FONT_HERSHEY_SIMPLEX, 0.5, color_l, 2)
+                    # 白背景に黒文字で見やすくする
+                    cv2.rectangle(viz_l, (x1, y1-20), (x1 + len(label)*8, y1-5), (255, 255, 255), -1)
+                    cv2.putText(viz_l, label, (x1, y1-8), 
+                               cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 0), 1, cv2.LINE_AA)
             
             # 画像を保存
             cv2.imwrite(os.path.join(out_viz_dir, f"{stem}_bplus.jpg"), viz_b)

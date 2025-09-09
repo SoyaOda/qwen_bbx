@@ -14,3 +14,21 @@ dataset:
   input_dir: "test_images"
   out_json_dir: "outputs/json"
   out_viz_dir: "outputs/viz"
+
+# SAM2 configuration
+sam2:
+  repo_root: "/home/soya/sam2_1_food_finetuning/external/sam2"
+  cfg_base_plus: "sam2/configs/sam2.1/sam2.1_hiera_b+.yaml"
+  cfg_large: "sam2/configs/sam2.1/sam2.1_hiera_l.yaml"
+  ckpt_base_plus: "/home/soya/sam2_1_food_finetuning/external/sam2/checkpoints/sam2.1_hiera_base_plus.pt"
+  ckpt_large: "/home/soya/sam2_1_food_finetuning/external/sam2/checkpoints/sam2.1_hiera_large.pt"
+  device: "cuda"                   # "cuda" or "cpu"
+  dtype: "bfloat16"                # "bfloat16"(GPU) / "float32"(CPU)
+  multimask_output: true           # SAM2で複数仮説出力→最良を選択
+  conf_threshold: 0.20             # Qwen検出の信頼度閾値
+
+# Paths for SAM2 processing
+paths:
+  qwen_json_dir: "outputs/json"    # 既存Qwen出力(JSON)の場所
+  input_dir: "test_images"         # 入力画像ディレクトリ
+  out_root: "outputs/sam2"         # SAM2出力のルートディレクトリ

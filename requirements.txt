@@ -4,3 +4,9 @@ pillow>=10.3.0
 numpy>=1.26.4
 pyyaml>=6.0.1
 tqdm>=4.66.4
+
+# SAM2 dependencies
+torch>=2.5.1
+torchvision>=0.20.1
+# Note: Install PyTorch with CUDA support if available:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124

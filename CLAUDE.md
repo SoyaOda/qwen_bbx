@@ -24,10 +24,10 @@ Web searchの際は、必ずo3-query MCPを利用すること！
 - 具体的なライブラリやモデルの使用方法を調べたい時
 
 [Introduction]
-
+md_files/spec1.mdに沿って実装して完了し、README.mdで実行できる状況なので両者とコードをよくレビューして理解して。
 
 [命令]
-test_imagesにテスト用の画像はある。
+md_files/spec2.mdを参考にしつつ実装を進めて。
 
 
 

@@ -27,7 +27,7 @@ Web searchの際は、必ずo3-query MCPを利用すること！
 md_files/spec1.md, md_files/spec2.mdに沿って実装して完了し、README.mdで実行できる状況なので両者とコードをよくレビューして理解して。
 
 [命令]
-outputs/sam2にmd_files/spec2.md実装分のResultsがあるのだが、これはどのScriptで生成された？src/run_sam2_v2.py？そこら辺を確かめて失効してみて
+md_files/unidepth_spec.mdを参考に実装を進めて。README.mdの同様の関y校とPythonを用いるぜんていですすめること。
 
 
 

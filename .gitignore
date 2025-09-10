@@ -79,4 +79,5 @@ test_images/*.Identifier
 # Temporary files
 *.tmp
 *.bak
-*.log
+*.logUniDepth/
+venv_new/

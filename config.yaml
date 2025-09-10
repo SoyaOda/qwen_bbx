@@ -32,3 +32,33 @@ paths:
   qwen_json_dir: "outputs/json"    # 既存Qwen出力(JSON)の場所
   input_dir: "test_images"         # 入力画像ディレクトリ
   out_root: "outputs/sam2"         # SAM2出力のルートディレクトリ
+  sam2_json_dir: "outputs/sam2/json"  # SAM2結果JSONの場所
+  sam2_mask_dir: "outputs/sam2/masks" # SAM2マスクPNGの場所
+
+# UniDepth v2 configuration
+unidepth:
+  model_repo: "lpiccinelli/unidepth-v2-vitl14"  # HuggingFaceモデルID（ViT-L版）
+  device: "cuda"                                 # "cuda" or "cpu"
+  save_npy: true                                 # npyファイルを保存
+  save_png: true                                 # 16bit PNGを保存
+  K_scale_factor: 6.0                           # カメラパラメータのスケーリング係数（体積調整用）
+
+# Plane fitting configuration
+plane:
+  ring_margin_px: 40           # 食品マスクの外側リング幅（皿/卓面候補）
+  ransac_threshold_m: 0.006    # 平面距離の閾値[m]（約6mm）
+  ransac_max_iters: 2000       # RANSAC最大反復回数
+  min_support_px: 2000         # RANSAC最小有効点数
+
+# Volume estimation configuration
+volume:
+  use_confidence_weight: false  # true: 信頼度を重み付けに使用
+  area_formula: "z2_over_fx_fy" # ピクセル面積の計算式
+  clip_negative_height: true    # 負の高さを0にクリップ
+
+# Mask source selection
+mask_source: "large"  # "bplus" or "large" - どちらのSAM2モデルのマスクを使うか
+
+# Output paths for UniDepth
+unidepth_paths:
+  out_root: "outputs/unidepth"  # UniDepth出力のルートディレクトリ

@@ -1,0 +1,1066 @@
+[
+  {
+    "image": "train_00000.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "total_volume_mL": 113715.52503151417,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 52704.49996359789,
+            "height_mean_mm": 164.05015318997576,
+            "height_max_mm": 249.20619710100289
+          },
+          {
+            "label": "det01",
+            "volume_mL": 24262.303042019237,
+            "height_mean_mm": 156.81940154692273,
+            "height_max_mm": 246.92039234390916
+          },
+          {
+            "label": "det02",
+            "volume_mL": 36748.722025897056,
+            "height_mean_mm": 234.48078525225964,
+            "height_max_mm": 347.01517801018935
+          }
+        ],
+        "evaluation": "✗ 異常(113.7L)"
+      },
+      {
+        "K_scale": 6.0,
+        "total_volume_mL": 777.6529301201003,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 380.9180073386057,
+            "height_mean_mm": 42.50242174328669,
+            "height_max_mm": 68.84175387785241
+          },
+          {
+            "label": "det01",
+            "volume_mL": 157.13825369496138,
+            "height_mean_mm": 36.56395600106301,
+            "height_max_mm": 61.363197516306315
+          },
+          {
+            "label": "det02",
+            "volume_mL": 239.59666908653327,
+            "height_mean_mm": 55.24886404822863,
+            "height_max_mm": 85.97210574707582
+          }
+        ],
+        "evaluation": "✓ 適切"
+      },
+      {
+        "K_scale": 8.0,
+        "total_volume_mL": 332.7155550558192,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 162.9545624291607,
+            "height_mean_mm": 32.33320308278155,
+            "height_max_mm": 52.3848021494514
+          },
+          {
+            "label": "det01",
+            "volume_mL": 66.86934656483558,
+            "height_mean_mm": 27.679680371490377,
+            "height_max_mm": 46.669926561248744
+          },
+          {
+            "label": "det02",
+            "volume_mL": 102.89164606182297,
+            "height_mean_mm": 42.18944413116655,
+            "height_max_mm": 65.72813798885218
+          }
+        ],
+        "evaluation": "✓ 適切"
+      },
+      {
+        "K_scale": 10.5,
+        "total_volume_mL": 148.25425380171976,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 72.64319963185436,
+            "height_mean_mm": 24.829333343890628,
+            "height_max_mm": 40.23407637586202
+          },
+          {
+            "label": "det01",
+            "volume_mL": 29.780996759748152,
+            "height_mean_mm": 21.235873018827405,
+            "height_max_mm": 35.81608223623281
+          },
+          {
+            "label": "det02",
+            "volume_mL": 45.83005741011724,
+            "height_mean_mm": 32.37281558064635,
+            "height_max_mm": 50.444879789995205
+          }
+        ],
+        "evaluation": "✓ 適切"
+      },
+      {
+        "K_scale": 12.0,
+        "total_volume_mL": 98.82227235021975,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 48.5759989259755,
+            "height_mean_mm": 21.684689244832065,
+            "height_max_mm": 35.16149643586344
+          },
+          {
+            "label": "det01",
+            "volume_mL": 19.734307706192407,
+            "height_mean_mm": 18.383757621165422,
+            "height_max_mm": 31.1183540538221
+          },
+          {
+            "label": "det02",
+            "volume_mL": 30.511965718051844,
+            "height_mean_mm": 28.15585053082324,
+            "height_max_mm": 43.94208434175073
+          }
+        ],
+        "evaluation": "✓ 適切"
+      },
+      {
+        "K_scale": 15.0,
+        "total_volume_mL": 47.758508510519974,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 24.133305037491475,
+            "height_mean_mm": 16.823495641338297,
+            "height_max_mm": 27.385789746414673
+          },
+          {
+            "label": "det01",
+            "volume_mL": 9.072638924856701,
+            "height_mean_mm": 13.226579651993509,
+            "height_max_mm": 23.031863223536703
+          },
+          {
+            "label": "det02",
+            "volume_mL": 14.552564548171803,
+            "height_mean_mm": 21.013726640899556,
+            "height_max_mm": 33.181528772853326
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      }
+    ],
+    "optimal_K_scale": 8.0,
+    "optimal_volume_mL": 332.7155550558192,
+    "depth_stats": {
+      "min": 1.1267573833465576,
+      "max": 2.189101457595825,
+      "median": 1.4489136934280396
+    },
+    "K_original": {
+      "fx": 685.661865234375,
+      "fy": 686.4993896484375
+    }
+  },
+  {
+    "image": "train_00001.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "total_volume_mL": 4974.286971274896,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 2639.914427001992,
+            "height_mean_mm": 69.69530628728974,
+            "height_max_mm": 132.37198783183513
+          },
+          {
+            "label": "det01",
+            "volume_mL": 561.034072831352,
+            "height_mean_mm": 20.99330677673885,
+            "height_max_mm": 48.9727529029419
+          },
+          {
+            "label": "det02",
+            "volume_mL": 1773.338471441552,
+            "height_mean_mm": 29.429698938168926,
+            "height_max_mm": 74.22913984566087
+          }
+        ],
+        "evaluation": "✗ 異常(5.0L)"
+      },
+      {
+        "K_scale": 6.0,
+        "total_volume_mL": 23.835370334569813,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 13.650402030187808,
+            "height_mean_mm": 13.00575320899389,
+            "height_max_mm": 25.151510003087573
+          },
+          {
+            "label": "det01",
+            "volume_mL": 1.503364235333469,
+            "height_mean_mm": 2.0260488538923758,
+            "height_max_mm": 6.900782994379407
+          },
+          {
+            "label": "det02",
+            "volume_mL": 8.681604069048536,
+            "height_mean_mm": 5.202896094898122,
+            "height_max_mm": 14.248204654787934
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 8.0,
+        "total_volume_mL": 10.165063209712788,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 5.7368296906882,
+            "height_mean_mm": 9.713951007207383,
+            "height_max_mm": 18.867987277882385
+          },
+          {
+            "label": "det01",
+            "volume_mL": 0.7106534674126379,
+            "height_mean_mm": 1.704674468951342,
+            "height_max_mm": 5.421721017442705
+          },
+          {
+            "label": "det02",
+            "volume_mL": 3.7175800516119493,
+            "height_mean_mm": 3.9621324744533206,
+            "height_max_mm": 10.729842162546424
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 10.5,
+        "total_volume_mL": 4.503542565505305,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 2.540874432022463,
+            "height_mean_mm": 7.411256280090063,
+            "height_max_mm": 14.399432310783764
+          },
+          {
+            "label": "det01",
+            "volume_mL": 0.31685567864351283,
+            "height_mean_mm": 1.3092358972008094,
+            "height_max_mm": 4.150212825627456
+          },
+          {
+            "label": "det02",
+            "volume_mL": 1.645812454839329,
+            "height_mean_mm": 3.0215257034112764,
+            "height_max_mm": 8.184228650287249
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 12.0,
+        "total_volume_mL": 3.015196749427655,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 1.7018560093753554,
+            "height_mean_mm": 6.483608663826473,
+            "height_max_mm": 12.601014115329482
+          },
+          {
+            "label": "det01",
+            "volume_mL": 0.21166837098990793,
+            "height_mean_mm": 1.1423396580313667,
+            "height_max_mm": 3.627815569775546
+          },
+          {
+            "label": "det02",
+            "volume_mL": 1.1016723690623917,
+            "height_mean_mm": 2.641695778206484,
+            "height_max_mm": 7.160841893539146
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 15.0,
+        "total_volume_mL": 1.542039006205032,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 0.8707347613384957,
+            "height_mean_mm": 5.183257242488544,
+            "height_max_mm": 10.079336206423289
+          },
+          {
+            "label": "det01",
+            "volume_mL": 0.1079112148415829,
+            "height_mean_mm": 0.910004503394442,
+            "height_max_mm": 2.897083976976959
+          },
+          {
+            "label": "det02",
+            "volume_mL": 0.5633930300249532,
+            "height_mean_mm": 2.110920634044985,
+            "height_max_mm": 5.727564540351615
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      }
+    ],
+    "optimal_K_scale": 6.0,
+    "optimal_volume_mL": 23.835370334569813,
+    "depth_stats": {
+      "min": 0.7081261873245239,
+      "max": 1.6516048908233643,
+      "median": 0.9496842622756958
+    },
+    "K_original": {
+      "fx": 787.4597778320312,
+      "fy": 777.1463623046875
+    }
+  },
+  {
+    "image": "train_00002.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "total_volume_mL": 5376.152461298781,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 2335.421550783529,
+            "height_mean_mm": 45.040046481530304,
+            "height_max_mm": 91.29135224070939
+          },
+          {
+            "label": "det01",
+            "volume_mL": 3040.730910515252,
+            "height_mean_mm": 126.87631631690488,
+            "height_max_mm": 211.51893606478862
+          }
+        ],
+        "evaluation": "✗ 異常(5.4L)"
+      },
+      {
+        "K_scale": 6.0,
+        "total_volume_mL": 31.098254126595556,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 12.748414572048164,
+            "height_mean_mm": 8.780745994931555,
+            "height_max_mm": 18.97599351713722
+          },
+          {
+            "label": "det01",
+            "volume_mL": 18.349839554547394,
+            "height_mean_mm": 27.518264482280642,
+            "height_max_mm": 45.11491971733941
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 8.0,
+        "total_volume_mL": 13.0992924694742,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 5.362701450001947,
+            "height_mean_mm": 6.569189516530572,
+            "height_max_mm": 14.252524373596607
+          },
+          {
+            "label": "det01",
+            "volume_mL": 7.736591019472254,
+            "height_mean_mm": 20.630022386765,
+            "height_max_mm": 33.89098860158033
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 10.5,
+        "total_volume_mL": 5.779921998967126,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 2.3609991530796974,
+            "height_mean_mm": 4.983076225077743,
+            "height_max_mm": 10.859263206743929
+          },
+          {
+            "label": "det01",
+            "volume_mL": 3.418922845887429,
+            "height_mean_mm": 15.70674253359272,
+            "height_max_mm": 25.833367243088205
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 12.0,
+        "total_volume_mL": 3.852916790389761,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 1.5686551809515283,
+            "height_mean_mm": 4.325500199399912,
+            "height_max_mm": 9.489186739208865
+          },
+          {
+            "label": "det01",
+            "volume_mL": 2.2842616094382326,
+            "height_mean_mm": 13.708207558617813,
+            "height_max_mm": 22.57592466238023
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 15.0,
+        "total_volume_mL": 1.9557330585415935,
+        "volumes": [
+          {
+            "label": "det00",
+            "volume_mL": 0.7921205969937377,
+            "height_mean_mm": 3.41436164357546,
+            "height_max_mm": 7.568788855955626
+          },
+          {
+            "label": "det01",
+            "volume_mL": 1.1636124615478558,
+            "height_mean_mm": 10.913457447110062,
+            "height_max_mm": 18.016584952697624
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      }
+    ],
+    "optimal_K_scale": 6.0,
+    "optimal_volume_mL": 31.098254126595556,
+    "depth_stats": {
+      "min": 0.5154784321784973,
+      "max": 1.3662664890289307,
+      "median": 0.70807945728302
+    },
+    "K_original": {
+      "fx": 642.8629150390625,
+      "fy": 628.2776489257812
+    }
+  },
+  {
+    "image": "train_00003.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "total_volume_mL": 28.378748609817613,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 28.378748609817613,
+            "height_mean_mm": 0.7410274427713944,
+            "height_max_mm": 6.07154162659107
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 6.0,
+        "total_volume_mL": 6.954807874686373,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 6.954807874686373,
+            "height_mean_mm": 6.367921503503897,
+            "height_max_mm": 17.614088874433666
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 8.0,
+        "total_volume_mL": 2.8529557022014282,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 2.8529557022014282,
+            "height_mean_mm": 4.652284363049923,
+            "height_max_mm": 13.366455702155722
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 10.5,
+        "total_volume_mL": 1.401040405266268,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 1.401040405266268,
+            "height_mean_mm": 3.9317525698306532,
+            "height_max_mm": 10.541347616736168
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 12.0,
+        "total_volume_mL": 0.9908376256096527,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.9908376256096527,
+            "height_mean_mm": 3.629803726684286,
+            "height_max_mm": 9.446573331420321
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 15.0,
+        "total_volume_mL": 0.4573370951329438,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.4573370951329438,
+            "height_mean_mm": 2.6184621448850325,
+            "height_max_mm": 7.2483929570342776
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      }
+    ],
+    "optimal_K_scale": 1.0,
+    "optimal_volume_mL": 28.378748609817613,
+    "depth_stats": {
+      "min": 1.0831758975982666,
+      "max": 1.5560081005096436,
+      "median": 1.2573919296264648
+    },
+    "K_original": {
+      "fx": 677.177490234375,
+      "fy": 676.681640625
+    }
+  },
+  {
+    "image": "train_00004.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "total_volume_mL": 302.2285323776342,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 302.2285323776342,
+            "height_mean_mm": 7.245333811883279,
+            "height_max_mm": 28.342910227061147
+          }
+        ],
+        "evaluation": "✓ 適切"
+      },
+      {
+        "K_scale": 6.0,
+        "total_volume_mL": 0.7325443678621839,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.7325443678621839,
+            "height_mean_mm": 0.6284945151513844,
+            "height_max_mm": 5.7922714478688135
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 8.0,
+        "total_volume_mL": 0.2762843792446406,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.2762843792446406,
+            "height_mean_mm": 0.4184393266657309,
+            "height_max_mm": 3.991818791660273
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 10.5,
+        "total_volume_mL": 0.2454189764859342,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.2454189764859342,
+            "height_mean_mm": 0.6310229101650136,
+            "height_max_mm": 3.573395370086274
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 12.0,
+        "total_volume_mL": 0.19391341660760084,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.19391341660760084,
+            "height_mean_mm": 0.655236247663826,
+            "height_max_mm": 3.5132839913280254
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 15.0,
+        "total_volume_mL": 0.1293727377874622,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.1293727377874622,
+            "height_mean_mm": 0.6849324390319221,
+            "height_max_mm": 3.1261346994967965
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      }
+    ],
+    "optimal_K_scale": 1.0,
+    "optimal_volume_mL": 302.2285323776342,
+    "depth_stats": {
+      "min": 1.1148700714111328,
+      "max": 1.6544188261032104,
+      "median": 1.3202089071273804
+    },
+    "K_original": {
+      "fx": 735.6077880859375,
+      "fy": 717.6907958984375
+    }
+  },
+  {
+    "image": "train_00005.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "total_volume_mL": 13.194214076754863,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 13.194214076754863,
+            "height_mean_mm": 0.984626671132705,
+            "height_max_mm": 16.63542432249421
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 6.0,
+        "total_volume_mL": 0.14480962465271763,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.14480962465271763,
+            "height_mean_mm": 0.33038706442954263,
+            "height_max_mm": 5.442082454049826
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 8.0,
+        "total_volume_mL": 0.09715371306618101,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.09715371306618101,
+            "height_mean_mm": 0.3939089982928152,
+            "height_max_mm": 5.073949522207285
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 10.5,
+        "total_volume_mL": 0.0499560700484402,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.0499560700484402,
+            "height_mean_mm": 0.34964286037265696,
+            "height_max_mm": 4.205789998896037
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 12.0,
+        "total_volume_mL": 0.06430602160880941,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.06430602160880941,
+            "height_mean_mm": 0.5603158889941021,
+            "height_max_mm": 5.300774289252651
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 15.0,
+        "total_volume_mL": 0.027255804406471802,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.027255804406471802,
+            "height_mean_mm": 0.3757199287208377,
+            "height_max_mm": 3.988734291440293
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      }
+    ],
+    "optimal_K_scale": 1.0,
+    "optimal_volume_mL": 13.194214076754863,
+    "depth_stats": {
+      "min": 0.569292426109314,
+      "max": 2.4759654998779297,
+      "median": 0.8581818342208862
+    },
+    "K_original": {
+      "fx": 741.7392578125,
+      "fy": 719.97216796875
+    }
+  },
+  {
+    "image": "train_00006.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "total_volume_mL": 1582.9545111057207,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 1582.9545111057207,
+            "height_mean_mm": 54.95161035542131,
+            "height_max_mm": 111.41042890446717
+          }
+        ],
+        "evaluation": "△ やや大"
+      },
+      {
+        "K_scale": 6.0,
+        "total_volume_mL": 5.694317639086523,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 5.694317639086523,
+            "height_mean_mm": 7.034125462381792,
+            "height_max_mm": 14.848351408906085
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 8.0,
+        "total_volume_mL": 2.54369549751049,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 2.54369549751049,
+            "height_mean_mm": 5.137758031410792,
+            "height_max_mm": 10.467103005704443
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 10.5,
+        "total_volume_mL": 1.019121574576923,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 1.019121574576923,
+            "height_mean_mm": 3.5265175582558843,
+            "height_max_mm": 7.031118838274203
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 12.0,
+        "total_volume_mL": 0.6374437966014115,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.6374437966014115,
+            "height_mean_mm": 2.877643975369312,
+            "height_max_mm": 5.527630946297157
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 15.0,
+        "total_volume_mL": 0.4144526929946656,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.4144526929946656,
+            "height_mean_mm": 2.959008359988474,
+            "height_max_mm": 4.928026907645829
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      }
+    ],
+    "optimal_K_scale": 6.0,
+    "optimal_volume_mL": 5.694317639086523,
+    "depth_stats": {
+      "min": 1.1681708097457886,
+      "max": 3.0621509552001953,
+      "median": 1.3295845985412598
+    },
+    "K_original": {
+      "fx": 823.238525390625,
+      "fy": 834.1635131835938
+    }
+  },
+  {
+    "image": "train_00007.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "total_volume_mL": 1957.8398207862024,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 1957.8398207862024,
+            "height_mean_mm": 24.49558285706134,
+            "height_max_mm": 89.10241109567619
+          }
+        ],
+        "evaluation": "△ やや大"
+      },
+      {
+        "K_scale": 6.0,
+        "total_volume_mL": 18.535201281408153,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 18.535201281408153,
+            "height_mean_mm": 8.36012514420879,
+            "height_max_mm": 31.225000224431255
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 8.0,
+        "total_volume_mL": 7.897075738888035,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 7.897075738888035,
+            "height_mean_mm": 6.337359149763167,
+            "height_max_mm": 23.723983437301975
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 10.5,
+        "total_volume_mL": 3.309463158359307,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 3.309463158359307,
+            "height_mean_mm": 4.577204238103097,
+            "height_max_mm": 17.638803070913976
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 12.0,
+        "total_volume_mL": 2.241717052991382,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 2.241717052991382,
+            "height_mean_mm": 4.04945389673545,
+            "height_max_mm": 15.578042368543322
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 15.0,
+        "total_volume_mL": 1.2185792789534604,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 1.2185792789534604,
+            "height_mean_mm": 3.4402345539668464,
+            "height_max_mm": 12.831920263251085
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      }
+    ],
+    "optimal_K_scale": 6.0,
+    "optimal_volume_mL": 18.535201281408153,
+    "depth_stats": {
+      "min": 1.072390079498291,
+      "max": 1.260200023651123,
+      "median": 1.1678491830825806
+    },
+    "K_original": {
+      "fx": 1921.3372802734375,
+      "fy": 1883.542724609375
+    }
+  },
+  {
+    "image": "train_00008.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "error": "平面候補点が不足: 391 < 1000"
+      },
+      {
+        "K_scale": 6.0,
+        "error": "平面候補点が不足: 391 < 1000"
+      },
+      {
+        "K_scale": 8.0,
+        "error": "平面候補点が不足: 391 < 1000"
+      },
+      {
+        "K_scale": 10.5,
+        "error": "平面候補点が不足: 391 < 1000"
+      },
+      {
+        "K_scale": 12.0,
+        "error": "平面候補点が不足: 391 < 1000"
+      },
+      {
+        "K_scale": 15.0,
+        "error": "平面候補点が不足: 391 < 1000"
+      }
+    ],
+    "depth_stats": {
+      "min": 0.9586492776870728,
+      "max": 1.7037855386734009,
+      "median": 1.2896182537078857
+    },
+    "K_original": {
+      "fx": 753.4258422851562,
+      "fy": 738.8533325195312
+    }
+  },
+  {
+    "image": "train_00009.jpg",
+    "tests": [
+      {
+        "K_scale": 1.0,
+        "total_volume_mL": 35.66818738455332,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 35.66818738455332,
+            "height_mean_mm": 1.4628347380073794,
+            "height_max_mm": 5.312260253502621
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 6.0,
+        "total_volume_mL": 1.5729643035487904,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 1.5729643035487904,
+            "height_mean_mm": 2.288787259073001,
+            "height_max_mm": 4.553325356809329
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 8.0,
+        "total_volume_mL": 1.0560081743057717,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 1.0560081743057717,
+            "height_mean_mm": 2.768218368957678,
+            "height_max_mm": 4.224932234438566
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 10.5,
+        "total_volume_mL": 0.4636128346248796,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.4636128346248796,
+            "height_mean_mm": 2.091758494055942,
+            "height_max_mm": 3.2278950250097944
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 12.0,
+        "total_volume_mL": 0.31083110710659867,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.31083110710659867,
+            "height_mean_mm": 1.831704368199642,
+            "height_max_mm": 2.827687392410655
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      },
+      {
+        "K_scale": 15.0,
+        "total_volume_mL": 0.15929429542304463,
+        "volumes": [
+          {
+            "label": "center_region",
+            "volume_mL": 0.15929429542304463,
+            "height_mean_mm": 1.4666972525627981,
+            "height_max_mm": 2.26524399621833
+          }
+        ],
+        "evaluation": "⚠ 小さい"
+      }
+    ],
+    "optimal_K_scale": 1.0,
+    "optimal_volume_mL": 35.66818738455332,
+    "depth_stats": {
+      "min": 1.0282005071640015,
+      "max": 1.5970443487167358,
+      "median": 1.2308486700057983
+    },
+    "K_original": {
+      "fx": 871.6384887695312,
+      "fy": 881.9130859375
+    }
+  }
+]

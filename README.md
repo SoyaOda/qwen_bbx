@@ -434,4 +434,32 @@ sam2:
 
 ---
 
+## 🆕 Depth Pro 統合（体積推定）
+
+### Apple Depth Pro による深度推定
+料理の体積推定のため、最新のApple Depth Proモデルを統合しました。UniDepth v2からの移行により、絶対スケールでの正確な深度推定が可能になります。
+
+#### 主な改善点
+- **K_scale補正が不要**: Depth Proは絶対スケールで深度を推定
+- **高精度な焦点距離推定**: EXIFメタデータ活用または自動推定
+- **細部まで保持される深度マップ**: 高解像度での推定
+
+#### インストール（オプション）
+```bash
+# Depth Proのインストール
+./install_depthpro.sh
+```
+
+#### 使用方法
+```bash
+# Depth Pro実装のテスト
+. venv_new/bin/activate
+python test_depthpro_implementation.py    # 単一マスクテスト
+python test_depthpro_with_masks.py       # 複数マスクテスト
+```
+
+**注意**: Depth Proが未インストールの場合、自動的にUniDepth v2ベースのシミュレーション版が使用されます。
+
+---
+
 *最終更新: 2025年1月*

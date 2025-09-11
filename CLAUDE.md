@@ -24,10 +24,10 @@ Web searchの際は、必ずo3-query MCPを利用すること！
 - 具体的なライブラリやモデルの使用方法を調べたい時
 
 [Introduction]
-md_files/spec1.md, md_files/spec2.mdに沿って実装して完了し、README.mdで実行できる状況なので両者とコードをよくレビューして理解して。
+現状test_v2_implementation.pyやtest_with_masks_only.pyなどで、QwenVL→SAM2.1→Unidepth v2の流れで料理ごとの体積予測している。Unidepth v2を最新のAppleのDepth Proに入れ替え、Depth Proに最適化されたアルゴリズムで体積予測を行いたい。
 
 [命令]
-md_files/unidepth_spec.mdを参考に実装を進めて。README.mdの同様の関y校とPythonを用いるぜんていですすめること。
+md_files/depth_pro_spec.mdを参考に実装を進めて。README.mdの同様の関y校とPythonを用いるぜんていですすめること。
 
 
 

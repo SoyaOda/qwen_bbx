@@ -23,16 +23,11 @@ Web searchの際は、必ずo3-query MCPを利用すること！
 - 公式ドキュメントやベストプラクティスを確認したい時
 - 具体的なライブラリやモデルの使用方法を調べたい時
 
-[Introduction]
-1．test_v2_implementation.pyやtest_with_masks_only.pyなどで、QwenVL→SAM2.1→Unidepth v2の流れで料理ごとの体積予測している。
-2．Unidepth v2を最新のAppleのDepth Proに入れ替え、Depth Proに最適化されたアルゴリズムで体積予測をtest_depthpro_implementation.pyやtest_depthpro_optimized.pyで予測した。
 
-1, 2両者において、体積予測結果が不十分だったため、Unidepth v2とDepth Anthing V2をNutrition 5KでFinetuningし、体積予測を比較したい。
 
 [命令]
-
-md_files/compare_DA_unidepth_spec.mdを参考に実装をすすめる。
-まずはmd_files/compare_DA_unidepth_spec.mdを理解したうえで、将来性も考えながら、Depth Anthing V2
+nutrition5kフォルダ内で進める。
+nutrition5k/md_files/install_spec.mdを参考にデータセットをインストールして。
 
 README.mdの同様の環境とPythonを用いるぜんていですすめること。
 

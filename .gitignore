@@ -81,3 +81,8 @@ test_images/*.Identifier
 *.bak
 *.logUniDepth/
 venv_new/
+UniDepth/
+checkpoints/
+ml-depth-pro/
+nutrition5k/nutrition5k_dataset/
+test_images_backup/

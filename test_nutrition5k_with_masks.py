@@ -13,11 +13,58 @@ from PIL import Image
 from pathlib import Path
 from transformers import AutoImageProcessor, AutoModelForDepthEstimation
 
+# UniDepth用のパスとインポート
+sys.path.append(os.path.join(os.path.dirname(__file__), 'UniDepth'))
+try:
+    from unidepth.models import UniDepthV2
+    UNIDEPTH_AVAILABLE = True
+except ImportError:
+    print("警告: UniDepth v2が利用できません。UniDepthディレクトリを確認してください。")
+    UNIDEPTH_AVAILABLE = False
+
 # プロジェクトのsrcディレクトリをパスに追加
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
 from plane_fit import estimate_plane_from_depth
 from volume_estimator import height_map_from_plane, pixel_area_map, integrate_volume
+
+
+def load_unidepth_model():
+    """UniDepth v2モデルをロード"""
+    if not UNIDEPTH_AVAILABLE:
+        return None, None
+    
+    print("UniDepth v2 モデルをロード中...")
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"使用デバイス: {device}")
+    
+    model = UniDepthV2.from_pretrained("lpiccinelli/unidepth-v2-vitl14").to(device)
+    model.eval()
+    
+    return model, device
+
+
+def infer_unidepth(image_path, model, device):
+    """UniDepth v2で画像から深度マップとK行列を推定"""
+    if model is None:
+        return None, None
+    
+    # 画像読み込み（正規化はモデル内部で実施）
+    rgb_pil = Image.open(image_path).convert("RGB")
+    rgb_np = np.array(rgb_pil)
+    
+    # RGBテンソルに変換（uint8のまま）
+    rgb = torch.from_numpy(rgb_np).permute(2,0,1).unsqueeze(0).to(device)
+    
+    # 推論実行（Kは推定させる）
+    with torch.inference_mode():
+        pred = model.infer(rgb)  # 正規化はモデル内部で行われる
+    
+    # 深度とKを取得
+    depth = pred["depth"].squeeze().detach().cpu().numpy()   # [m]
+    K = pred["intrinsics"].squeeze().detach().cpu().numpy()  # (3,3)
+    
+    return depth, K
 
 
 def load_depth_anything_model():
@@ -172,8 +219,9 @@ def get_nutrition5k_K_matrix():
     return K
 
 
-def process_nutrition5k_sample(sample_id, processor, model, device):
-    """Nutrition5kサンプルを処理"""
+def process_nutrition5k_sample(sample_id, da_processor, da_model, da_device, 
+                               uni_model=None, uni_device=None):
+    """Nutrition5kサンプルを処理（複数の深度推定手法を比較）"""
     print(f"\n{'='*60}")
     print(f"処理中: {sample_id}")
     print(f"{'='*60}")
@@ -216,7 +264,14 @@ def process_nutrition5k_sample(sample_id, processor, model, device):
     
     # Depth Anything V2で深度推定
     print("Depth Anything V2で深度推定中...")
-    pred_depth = infer_depth_anything(image_path, processor, model, device)
+    da_depth = infer_depth_anything(image_path, da_processor, da_model, da_device)
+    
+    # UniDepth v2で深度推定
+    uni_depth = None
+    uni_K = None
+    if uni_model is not None:
+        print("UniDepth v2で深度推定中...")
+        uni_depth, uni_K = infer_unidepth(image_path, uni_model, uni_device)
     
     # K行列を取得
     K = get_nutrition5k_K_matrix()
@@ -227,10 +282,19 @@ def process_nutrition5k_sample(sample_id, processor, model, device):
     K_scaled_gt[1, 1] *= K_scale_factor
     
     # Depth Anything V2の場合は別のスケール係数
-    K_scale_factor_pred = 3.0  # 予測深度用のスケール調整
-    K_scaled_pred = K.copy()
-    K_scaled_pred[0, 0] *= K_scale_factor_pred
-    K_scaled_pred[1, 1] *= K_scale_factor_pred
+    K_scale_factor_da = 3.0  # Depth Anything V2用のスケール調整
+    K_scaled_da = K.copy()
+    K_scaled_da[0, 0] *= K_scale_factor_da
+    K_scaled_da[1, 1] *= K_scale_factor_da
+    
+    # UniDepth v2は推定されたKを使用
+    K_scale_factor_uni = 10.5  # UniDepth v2の経験値
+    if uni_K is not None:
+        K_scaled_uni = uni_K.copy()
+        K_scaled_uni[0, 0] *= K_scale_factor_uni
+        K_scaled_uni[1, 1] *= K_scale_factor_uni
+    else:
+        K_scaled_uni = None
     
     results = {}
     
@@ -241,16 +305,30 @@ def process_nutrition5k_sample(sample_id, processor, model, device):
     
     # 予測深度での体積計算
     print("\n--- Depth Anything V2予測深度を使用した体積計算 ---")
-    results['predicted'] = calculate_volumes(pred_depth, K_scaled_pred, masks, labels)
+    results['da_v2'] = calculate_volumes(da_depth, K_scaled_da, masks, labels)
+    
+    # UniDepth v2での体積計算
+    if uni_depth is not None:
+        print("\n--- UniDepth v2予測深度を使用した体積計算 ---")
+        results['unidepth'] = calculate_volumes(uni_depth, K_scaled_uni, masks, labels)
     
     # 結果の比較
-    if 'gt' in results and 'predicted' in results:
+    if 'gt' in results and ('da_v2' in results or 'unidepth' in results):
         print("\n--- 体積比較 ---")
         for i, label in enumerate(labels):
             gt_vol = results['gt']['volumes'][i]
-            pred_vol = results['predicted']['volumes'][i]
-            error = abs(pred_vol - gt_vol) / gt_vol * 100 if gt_vol > 0 else 0
-            print(f"  {label:30s}: GT={gt_vol:7.1f}mL, 予測={pred_vol:7.1f}mL, 誤差={error:5.1f}%")
+            print(f"  {label:30s}:")
+            print(f"    GT: {gt_vol:7.1f}mL")
+            
+            if 'da_v2' in results:
+                da_vol = results['da_v2']['volumes'][i]
+                da_error = abs(da_vol - gt_vol) / gt_vol * 100 if gt_vol > 0 else 0
+                print(f"    Depth Anything V2: {da_vol:7.1f}mL (誤差={da_error:5.1f}%)")
+            
+            if 'unidepth' in results:
+                uni_vol = results['unidepth']['volumes'][i]
+                uni_error = abs(uni_vol - gt_vol) / gt_vol * 100 if gt_vol > 0 else 0
+                print(f"    UniDepth v2: {uni_vol:7.1f}mL (誤差={uni_error:5.1f}%)")
     
     return results
 
@@ -298,15 +376,19 @@ def calculate_volumes(depth_map, K, masks, labels):
 
 def main():
     """メイン処理"""
-    # モデルをロード
-    processor, model, device = load_depth_anything_model()
+    # Depth Anything V2モデルをロード
+    da_processor, da_model, da_device = load_depth_anything_model()
+    
+    # UniDepth v2モデルをロード
+    uni_model, uni_device = load_unidepth_model()
     
     # テストするサンプル
     samples = ['train_00000', 'train_00001', 'train_00002']
     
     all_results = {}
     for sample_id in samples:
-        results = process_nutrition5k_sample(sample_id, processor, model, device)
+        results = process_nutrition5k_sample(sample_id, da_processor, da_model, da_device,
+                                              uni_model, uni_device)
         if results:
             all_results[sample_id] = results
     
@@ -316,21 +398,37 @@ def main():
         print("全体統計")
         print("="*60)
         
-        errors = []
+        da_errors = []
+        uni_errors = []
+        
         for sample_id, results in all_results.items():
-            if 'gt' in results and 'predicted' in results:
+            if 'gt' in results:
                 for i in range(len(results['gt']['volumes'])):
                     gt_vol = results['gt']['volumes'][i]
-                    pred_vol = results['predicted']['volumes'][i]
-                    if gt_vol > 0:
-                        error = abs(pred_vol - gt_vol) / gt_vol * 100
-                        errors.append(error)
+                    
+                    if 'da_v2' in results and gt_vol > 0:
+                        da_vol = results['da_v2']['volumes'][i]
+                        da_error = abs(da_vol - gt_vol) / gt_vol * 100
+                        da_errors.append(da_error)
+                    
+                    if 'unidepth' in results and gt_vol > 0:
+                        uni_vol = results['unidepth']['volumes'][i]
+                        uni_error = abs(uni_vol - gt_vol) / gt_vol * 100
+                        uni_errors.append(uni_error)
         
-        if errors:
-            print(f"平均相対誤差: {np.mean(errors):.1f}%")
-            print(f"中央値相対誤差: {np.median(errors):.1f}%")
-            print(f"最小誤差: {np.min(errors):.1f}%")
-            print(f"最大誤差: {np.max(errors):.1f}%")
+        if da_errors:
+            print("\nDepth Anything V2統計:")
+            print(f"  平均相対誤差: {np.mean(da_errors):.1f}%")
+            print(f"  中央値相対誤差: {np.median(da_errors):.1f}%")
+            print(f"  最小誤差: {np.min(da_errors):.1f}%")
+            print(f"  最大誤差: {np.max(da_errors):.1f}%")
+        
+        if uni_errors:
+            print("\nUniDepth v2統計:")
+            print(f"  平均相対誤差: {np.mean(uni_errors):.1f}%")
+            print(f"  中央値相対誤差: {np.median(uni_errors):.1f}%")
+            print(f"  最小誤差: {np.min(uni_errors):.1f}%")
+            print(f"  最大誤差: {np.max(uni_errors):.1f}%")
 
 
 if __name__ == "__main__":

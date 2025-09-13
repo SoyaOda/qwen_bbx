@@ -26,17 +26,32 @@ Web searchの際は、必ずo3-query MCPを利用すること！
 [Introduction]
 1．test_v2_implementation.pyやtest_with_masks_only.pyなどで、QwenVL→SAM2.1→Unidepth v2の流れで料理ごとの体積予測している。
 2．Unidepth v2を最新のAppleのDepth Proに入れ替え、Depth Proに最適化されたアルゴリズムで体積予測をtest_depthpro_implementation.pyやtest_depthpro_optimized.pyで予測した。
+3. test_depthanything_v2.pyでDepth Anthing V2のMetricsバージョンのゼロショット推論はできた。
 
-1, 2両者において、体積予測結果が不十分だったため、Unidepth v2とDepth Anthing V2をNutrition 5KでFinetuningし、体積予測を比較したい。
-→と思ったが、まずはDepth Anthing V2で同様に体積予測をTestしたい。
+4. nutrition5kにRawデータは用意してある。
+
+ゼロショットでは体積予測結果が不十分だったため、Depth Anthing V2をNutrition 5KでFinetuningし、体積予測を比較したい。
+
 
 [命令]
+本プロジェクトはFinetuningフォルダ内で実装をすすめること。
+Finetuning/md_files/DA_v2.mdを参考に実装をすすめて。その際、シンプルにNutrition5kでDAV2をFinetuningする方針にして、FinetuningにMaskデータなどは使わないようにして
 
-md_files/DA_v2_spec.mdを参考に実装をすすめて。Testする画像はnutrition5kのサンプルを一つ選んでTestして。その際、DA_v2_spec.mdの情報で足りない場合は、その都度Query prompt作成して保存して（その後こちらで回答を共有します）。
+DA_v2.mdの情報で足りない場合は、その都度Query prompt作成して保存して（その後こちらで回答を共有します）。
 
 README.mdの同様の環境とPythonを用いるぜんていですすめること。
 
+## 🔧 トラブルシューティング
 
+### Python バージョンの問題
+
+```bash
+# 間違った例（Python 3.12が使われる）
+python src/run_infer.py  # ❌ ModuleNotFoundError
+
+# 正しい例（Python 3.11を明示的に指定）
+venv/bin/python3.11 src/run_infer.py  # ✅
+```
 
 機能ごとに少しずつ実装を行い、適宜テストを行い実際に動くことを確認して次の機能を実装するように進めること。
 

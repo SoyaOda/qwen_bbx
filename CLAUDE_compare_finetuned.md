@@ -24,13 +24,20 @@ Web searchの際は、必ずo3-query MCPを利用すること！
 - 具体的なライブラリやモデルの使用方法を調べたい時
 
 [Introduction]
+1．test_v2_implementation.pyやtest_with_masks_only.pyなどで、QwenVL→SAM2.1→Unidepth v2の流れで料理ごとの体積予測している。
+2．Unidepth v2を最新のAppleのDepth Proに入れ替え、Depth Proに最適化されたアルゴリズムで体積予測をtest_depthpro_implementation.pyやtest_depthpro_optimized.pyで予測した。
+3. test_depthanything_v2.pyでDepth Anthing V2のMetricsバージョンのゼロショット推論はできた。
 
+4. nutrition5kにRawデータは用意してある。
+
+ゼロショットでは体積予測結果が不十分だったため、Depth Anthing V2をNutrition 5KでFinetuningし、体積予測を比較したい。
 
 
 [命令]
-本プロジェクトはexif_food_datasetフォルダ内で実装をすすめること。
-exif_food_dataset/me_files/gpt5pro.mdを参考に実装をすすめたい。まずはUNIMIB2016（大学食堂トレイ画像・セグメンテーション付き）に関して、インストールして（可能ならコードベース、無理なら手順を教えて）中身を確認してEXIFが存在するか確認して。
-
+本プロジェクトはDA_V2_finetuned_vs_pretrainedフォルダ内で実装をすすめること。
+Finetuning/md_files/DA_v2.mdを参考に実装をすすめて。その際、シンプルにNutrition5kでDAV2をFinetuningする方針にして、FinetuningにMaskデータなどは使わないようにして
+→Finetuning後のモデルでtest_dav2_finetuned_comparison.py、test_dav2_finetuned_vs_pretrained.py、test_dav2_scale_comparison.pyなどでTestしたが、Nutrition5kにはEXIFが存在しないため、Kを固定で設定しないといけない問題が発生。
+→md_files/compare_finetuned_vs_pretrained_VA_gpt5pro2.mdのようにYFCC100Mの料理画像を入力にしてテストしたい。
 
 一気に実装するのでなく、機能単位ごとに機能テストして実際に動くことを確認して次の実装に進むこと。
 

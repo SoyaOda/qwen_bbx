@@ -1,0 +1,82 @@
+[
+  {
+    "image": "train_00000.jpg",
+    "total_volume_pretrained_mL": 1.825271859708723,
+    "total_volume_finetuned_mL": 1.9277963618219935,
+    "results": [
+      {
+        "label": "olive",
+        "volume_pretrained_mL": 0.0,
+        "volume_finetuned_mL": 0.16675820786330148,
+        "height_pre_mean_mm": 0.0,
+        "height_ft_mean_mm": 3.690723299164756,
+        "improvement_percent": 0.0
+      },
+      {
+        "label": "rice",
+        "volume_pretrained_mL": 0.008331216246252427,
+        "volume_finetuned_mL": 1.7509048880904228,
+        "height_pre_mean_mm": 0.00662471768037571,
+        "height_ft_mean_mm": 4.103217553959391,
+        "improvement_percent": -20916.19783159536
+      },
+      {
+        "label": "snow_peas",
+        "volume_pretrained_mL": 1.8169406434624706,
+        "volume_finetuned_mL": 0.0,
+        "height_pre_mean_mm": 0.3341172844952453,
+        "height_ft_mean_mm": 0.0,
+        "improvement_percent": 100.0
+      },
+      {
+        "label": "chicken_with_sauce",
+        "volume_pretrained_mL": 0.0,
+        "volume_finetuned_mL": 0.01013326586826935,
+        "height_pre_mean_mm": 0.0,
+        "height_ft_mean_mm": 0.0386168152031743,
+        "improvement_percent": 0.0
+      }
+    ],
+    "mean_depth_difference_mm": 371.828125
+  },
+  {
+    "image": "train_00001.jpg",
+    "total_volume_pretrained_mL": 19.71481404776431,
+    "total_volume_finetuned_mL": 4.438371639984645,
+    "results": [
+      {
+        "label": "mashed_potatoes",
+        "volume_pretrained_mL": 4.983321732978773,
+        "volume_finetuned_mL": 0.7741289072520428,
+        "height_pre_mean_mm": 9.631796310275357,
+        "height_ft_mean_mm": 5.865973483500385,
+        "improvement_percent": 84.46560449571237
+      },
+      {
+        "label": "salad",
+        "volume_pretrained_mL": 1.5949719330842735,
+        "volume_finetuned_mL": 0.8654090123815128,
+        "height_pre_mean_mm": 4.136599564231554,
+        "height_ft_mean_mm": 9.711461111508406,
+        "improvement_percent": 45.74142689094033
+      },
+      {
+        "label": "zucchini_slices",
+        "volume_pretrained_mL": 0.8386064080784575,
+        "volume_finetuned_mL": 0.4452337494978004,
+        "height_pre_mean_mm": 2.72419247530436,
+        "height_ft_mean_mm": 6.260376525681783,
+        "improvement_percent": 46.90790039179552
+      },
+      {
+        "label": "stewed_meat_with_tomato_sauce",
+        "volume_pretrained_mL": 12.297913973622805,
+        "volume_finetuned_mL": 2.3535999708532893,
+        "height_pre_mean_mm": 10.062021859676788,
+        "height_ft_mean_mm": 7.697083539900687,
+        "improvement_percent": 80.8617951312604
+      }
+    ],
+    "mean_depth_difference_mm": 459.9920959472656
+  }
+]

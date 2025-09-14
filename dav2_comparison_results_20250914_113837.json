@@ -1,0 +1,170 @@
+{
+  "test_dish_ids": [
+    "1556572657",
+    "1556573514",
+    "1556575014"
+  ],
+  "results": [
+    {
+      "dish_id": "1556572657",
+      "pretrained": {
+        "volume_ml": 0.0,
+        "absrel": NaN,
+        "rmse_m": NaN,
+        "stats": {}
+      },
+      "finetuned": {
+        "volume_ml": 0.0,
+        "absrel": NaN,
+        "rmse_m": NaN,
+        "stats": {}
+      },
+      "ground_truth": {
+        "volume_ml": 0.0,
+        "stats": {}
+      },
+      "improvements": {
+        "absrel_reduction": 0,
+        "rmse_reduction": 0,
+        "volume_error_pre": 0.0,
+        "volume_error_ft": 0.0,
+        "volume_error_reduction": 0
+      }
+    },
+    {
+      "dish_id": "1556573514",
+      "pretrained": {
+        "volume_ml": 65819.61334421781,
+        "absrel": 0.98988938331604,
+        "rmse_m": 0.37690025568008423,
+        "stats": {
+          "depth_min": 0.6728319525718689,
+          "depth_max": 2.2573108673095703,
+          "depth_mean": 0.7528274059295654,
+          "height_mean": 0.2649777744842568,
+          "height_max": 1.0528386528006872,
+          "num_pixels": 247088,
+          "plane_params": [
+            0.9994975983218655,
+            -0.002108268288965511,
+            0.03162445499364163,
+            -0.3017223902117036
+          ]
+        }
+      },
+      "finetuned": {
+        "volume_ml": 0.0,
+        "absrel": 0.009710066020488739,
+        "rmse_m": 0.006306446623057127,
+        "stats": {
+          "depth_min": 0.3263338804244995,
+          "depth_max": 0.44563740491867065,
+          "depth_mean": 0.3769528269767761,
+          "height_mean": 0.0,
+          "height_max": 0.0,
+          "num_pixels": 247088,
+          "plane_params": [
+            0.9236528922519971,
+            -0.05250848461668933,
+            0.37961585014034893,
+            -0.014321162229291418
+          ]
+        }
+      },
+      "ground_truth": {
+        "volume_ml": 398.44497225174837,
+        "stats": {
+          "depth_min": 0.26170000433921814,
+          "depth_max": 0.43479999899864197,
+          "depth_mean": 0.3791775107383728,
+          "height_mean": 0.0077306759556803545,
+          "height_max": 0.11089998483657837,
+          "num_pixels": 247088,
+          "plane_params": [
+            0.0,
+            0.0,
+            1.0,
+            -0.3725999891757965
+          ]
+        }
+      },
+      "improvements": {
+        "absrel_reduction": 99.01907348632812,
+        "rmse_reduction": 98.3267593383789,
+        "volume_error_pre": 65421.168371966065,
+        "volume_error_ft": 398.44497225174837,
+        "volume_error_reduction": 99.3909540563594
+      }
+    },
+    {
+      "dish_id": "1556575014",
+      "pretrained": {
+        "volume_ml": 50866.122572116015,
+        "absrel": 0.835673987865448,
+        "rmse_m": 0.3178546726703644,
+        "stats": {
+          "depth_min": 0.6073771119117737,
+          "depth_max": 1.6513898372650146,
+          "depth_mean": 0.6951223015785217,
+          "height_mean": 0.2408889129656894,
+          "height_max": 0.7128980397521567,
+          "num_pixels": 249766,
+          "plane_params": [
+            0.9875622150119612,
+            0.009178370350047892,
+            0.1569605969611062,
+            -0.3624425824714439
+          ]
+        }
+      },
+      "finetuned": {
+        "volume_ml": 0.0,
+        "absrel": 0.007511847652494907,
+        "rmse_m": 0.004032117314636707,
+        "stats": {
+          "depth_min": 0.34049010276794434,
+          "depth_max": 0.4223927855491638,
+          "depth_mean": 0.3772464394569397,
+          "height_mean": 0.0,
+          "height_max": 0.0,
+          "num_pixels": 249766,
+          "plane_params": [
+            0.9209119817839612,
+            -0.05645340702532198,
+            0.38566064699677416,
+            -0.01697564499511725
+          ]
+        }
+      },
+      "ground_truth": {
+        "volume_ml": 309.161484369593,
+        "stats": {
+          "depth_min": 0.34139999747276306,
+          "depth_max": 0.42260000109672546,
+          "depth_mean": 0.3792574107646942,
+          "height_mean": 0.00575584976781546,
+          "height_max": 0.02889999747276306,
+          "num_pixels": 249766,
+          "plane_params": [
+            0.0,
+            0.0,
+            1.0,
+            -0.3702999949455261
+          ]
+        }
+      },
+      "improvements": {
+        "absrel_reduction": 99.10110473632812,
+        "rmse_reduction": 98.73146057128906,
+        "volume_error_pre": 50556.96108774642,
+        "volume_error_ft": 309.161484369593,
+        "volume_error_reduction": 99.38848879023205
+      }
+    }
+  ],
+  "summary": {
+    "avg_absrel_reduction": 66.04005940755208,
+    "avg_rmse_reduction": 65.68607330322266,
+    "avg_volume_error_reduction": 66.25981428219715
+  }
+}

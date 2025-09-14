@@ -34,10 +34,14 @@ Web searchの際は、必ずo3-query MCPを利用すること！
 
 
 [命令]
-本プロジェクトはFinetuningフォルダ内で実装をすすめること。
+本プロジェクトはDA_V2_finetuned_vs_pretrainedフォルダ内で実装をすすめること。
 Finetuning/md_files/DA_v2.mdを参考に実装をすすめて。その際、シンプルにNutrition5kでDAV2をFinetuningする方針にして、FinetuningにMaskデータなどは使わないようにして
+→Finetuning後のモデルでtest_dav2_finetuned_comparison.py、test_dav2_finetuned_vs_pretrained.py、test_dav2_scale_comparison.pyなどでTestしたが、Nutrition5kにはEXIFが存在しないため、Kを固定で設定しないといけない問題が発生。
+→md_files/compare_finetuned_vs_pretrained_VA_gpt5pro2.mdのようにYFCC100Mの料理画像を入力にしてテストしたい。
 
-DA_v2.mdの情報で足りない場合は、その都度Query prompt作成して保存して（その後こちらで回答を共有します）。
+一気に実装するのでなく、機能単位ごとに機能テストして実際に動くことを確認して次の実装に進むこと。
+
+compare_finetuned_vs_pretrained_VA_gpt5pro2.mdの情報で足りない場合は、その都度Query prompt作成して保存して（その後こちらで回答を共有します）。
 
 README.mdの同様の環境とPythonを用いるぜんていですすめること。
 

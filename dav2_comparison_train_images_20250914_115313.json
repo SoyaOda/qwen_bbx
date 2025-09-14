@@ -1,0 +1,40 @@
+[
+  {
+    "image": "train_00000.jpg",
+    "total_volume_pretrained_mL": 1.825271859708723,
+    "total_volume_finetuned_mL": 1.9277963618219935,
+    "results": [
+      {
+        "label": "olive",
+        "volume_pretrained_mL": 0.0,
+        "volume_finetuned_mL": 0.16675820786330148,
+        "height_pre_mean_mm": 0.0,
+        "height_ft_mean_mm": 3.690723299164756,
+        "improvement_percent": 0
+      },
+      {
+        "label": "rice",
+        "volume_pretrained_mL": 0.008331216246252427,
+        "volume_finetuned_mL": 1.7509048880904228,
+        "height_pre_mean_mm": 0.00662471768037571,
+        "height_ft_mean_mm": 4.103217553959391,
+        "improvement_percent": -20916.19783159536
+      },
+      {
+        "label": "snow_peas",
+        "volume_pretrained_mL": 1.8169406434624706,
+        "volume_finetuned_mL": 0.0,
+        "height_pre_mean_mm": 0.3341172844952453,
+        "height_ft_mean_mm": 0.0,
+        "improvement_percent": 100.0
+      },
+      {
+        "label": "chicken_with_sauce",
+        "volume_pretrained_mL": 0.0,
+        "volume_finetuned_mL": 0.01013326586826935,
+        "height_pre_mean_mm": 0.0,
+        "height_ft_mean_mm": 0.0386168152031743,
+        "improvement_percent": 0
+      }
+    ],
+    "mean_depth_difference_mm": 

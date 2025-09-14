@@ -1,0 +1,170 @@
+{
+  "test_dish_ids": [
+    "1556572657",
+    "1556573514",
+    "1556575014"
+  ],
+  "results": [
+    {
+      "dish_id": "1556572657",
+      "pretrained": {
+        "volume_ml": 0.0,
+        "absrel": NaN,
+        "rmse_m": NaN,
+        "stats": {}
+      },
+      "finetuned": {
+        "volume_ml": 0.0,
+        "absrel": NaN,
+        "rmse_m": NaN,
+        "stats": {}
+      },
+      "ground_truth": {
+        "volume_ml": 0.0,
+        "stats": {}
+      },
+      "improvements": {
+        "absrel_reduction": 0,
+        "rmse_reduction": 0,
+        "volume_error_pre": 0.0,
+        "volume_error_ft": 0.0,
+        "volume_error_reduction": 0
+      }
+    },
+    {
+      "dish_id": "1556573514",
+      "pretrained": {
+        "volume_ml": 0.0,
+        "absrel": 0.98988938331604,
+        "rmse_m": 0.37690025568008423,
+        "stats": {
+          "depth_min": 0.6728319525718689,
+          "depth_max": 2.2573108673095703,
+          "depth_mean": 0.7528274059295654,
+          "height_mean": 0.012223472818732262,
+          "height_max": 0.09110021591186523,
+          "num_pixels": 247088,
+          "plane_params": [
+            -7.143793755371575e-05,
+            -2.8272808525628325e-05,
+            -0.9999999970486346,
+            0.7831262923488064
+          ]
+        }
+      },
+      "finetuned": {
+        "volume_ml": 0.0,
+        "absrel": 0.009710066020488739,
+        "rmse_m": 0.006306446623057127,
+        "stats": {
+          "depth_min": 0.3263338804244995,
+          "depth_max": 0.44563740491867065,
+          "depth_mean": 0.3769528269767761,
+          "height_mean": 0.00235274457372725,
+          "height_max": 0.031074566766619682,
+          "num_pixels": 247088,
+          "plane_params": [
+            1.372442403959768e-05,
+            2.201247375544859e-06,
+            -0.9999999999033974,
+            0.3517056572413361
+          ]
+        }
+      },
+      "ground_truth": {
+        "volume_ml": 0.0,
+        "stats": {
+          "depth_min": 0.26170000433921814,
+          "depth_max": 0.43479999899864197,
+          "depth_mean": 0.3791775107383728,
+          "height_mean": 0.002511074999347329,
+          "height_max": 0.09069566428661346,
+          "num_pixels": 247088,
+          "plane_params": [
+            1.765138027804791e-05,
+            -4.689519718475394e-05,
+            0.9999999987446345,
+            -0.35745944537543184
+          ]
+        }
+      },
+      "improvements": {
+        "absrel_reduction": 99.01907348632812,
+        "rmse_reduction": 98.3267593383789,
+        "volume_error_pre": 0.0,
+        "volume_error_ft": 0.0,
+        "volume_error_reduction": 0
+      }
+    },
+    {
+      "dish_id": "1556575014",
+      "pretrained": {
+        "volume_ml": 0.0,
+        "absrel": 0.835673987865448,
+        "rmse_m": 0.3178546726703644,
+        "stats": {
+          "depth_min": 0.6073771119117737,
+          "depth_max": 1.6513898372650146,
+          "depth_mean": 0.6951223015785217,
+          "height_mean": 0.01675603911280632,
+          "height_max": 0.11503080278635025,
+          "num_pixels": 249766,
+          "plane_params": [
+            8.264223834641994e-05,
+            -1.1717245201973898e-05,
+            0.9999999965164832,
+            -0.7299283552960637
+          ]
+        }
+      },
+      "finetuned": {
+        "volume_ml": 0.0,
+        "absrel": 0.007511847652494907,
+        "rmse_m": 0.004032117314636707,
+        "stats": {
+          "depth_min": 0.34049010276794434,
+          "depth_max": 0.4223927855491638,
+          "depth_mean": 0.3772464394569397,
+          "height_mean": 0.0014103185385465622,
+          "height_max": 0.021795064210891724,
+          "num_pixels": 249766,
+          "plane_params": [
+            1.8182389369098287e-05,
+            -4.2752389375153e-05,
+            0.999999998920817,
+            -0.35532719585338934
+          ]
+        }
+      },
+      "ground_truth": {
+        "volume_ml": 0.0,
+        "stats": {
+          "depth_min": 0.34139999747276306,
+          "depth_max": 0.42260000109672546,
+          "depth_mean": 0.3792574107646942,
+          "height_mean": 0.002168296603485942,
+          "height_max": 0.0179060697555542,
+          "num_pixels": 249766,
+          "plane_params": [
+            -3.851740446652739e-06,
+            -3.1259501406388496e-05,
+            0.999999999504004,
+            -0.35463404395033093
+          ]
+        }
+      },
+      "improvements": {
+        "absrel_reduction": 99.10110473632812,
+        "rmse_reduction": 98.73146057128906,
+        "volume_error_pre": 0.0,
+        "volume_error_ft": 0.0,
+        "volume_error_reduction": 0
+      }
+    }
+  ],
+  "summary": {
+    "avg_absrel_reduction": 66.04005940755208,
+    "avg_rmse_reduction": 65.68607330322266,
+    "avg_volume_error_reduction": 0.0
+  }
+}

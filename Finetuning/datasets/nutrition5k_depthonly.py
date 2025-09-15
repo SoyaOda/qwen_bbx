@@ -86,8 +86,24 @@ class Nutrition5KDepthOnly(Dataset):
             dummy_valid = torch.zeros(1, 480, 640)
             return dummy_img, dummy_depth, dummy_valid
 
-def load_split_ids(n5k_root: str, val_ratio: float = 0.1, seed: int = 42, use_clean: bool = True):
+def load_split_ids(n5k_root: str, val_ratio: float = 0.1, seed: int = 42, use_clean: bool = True, use_temporal: bool = True):
     """ dish_ids/splits/depth_train_ids.txt, depth_test_ids.txt を読む """
+    
+    # 時系列考慮型の新しい分割を優先的に使用
+    if use_temporal:
+        temporal_dir = os.path.join(os.path.dirname(__file__), "..", "temporal_aware_splits")
+        if os.path.exists(temporal_dir):
+            temporal_train = os.path.join(temporal_dir, "temporal_train_ids.txt")
+            temporal_val = os.path.join(temporal_dir, "temporal_val_ids.txt")
+            temporal_test = os.path.join(temporal_dir, "temporal_test_ids.txt")
+            
+            if all(os.path.exists(f) for f in [temporal_train, temporal_val, temporal_test]):
+                def _read(p):
+                    with open(p, "r") as f:
+                        return [ln.strip() for ln in f if ln.strip()]
+                
+                print(f"Using temporal-aware split files (no data leak)")
+                return _read(temporal_train), _read(temporal_val), _read(temporal_test)
     
     # クリーンなIDファイルが存在する場合はそれを使用
     if use_clean:

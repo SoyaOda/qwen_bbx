@@ -1,0 +1,101 @@
+{
+  "file_info": {
+    "source": "Flickr",
+    "file_id": "49632490042_8393211035_o.jpg"
+  },
+  "camera_info": {
+    "Make": "Apple",
+    "Software": "13.1.3"
+  },
+  "lens_info": {
+    "LensModel": "iPhone 8 back camera 3.99mm f/1.8",
+    "LensInfo": "3.99mm f/1.8",
+    "LensMake": "Apple"
+  },
+  "focal_info": {
+    "focal_length_mm": 3.99,
+    "focal_length_35mm": 28
+  },
+  "exposure_info": {
+    "f_number": 8.0,
+    "iso": 100,
+    "brightness_value": 0.6775324552,
+    "exposure_bias": "0 EV",
+    "metering_mode": "Multi-segment",
+    "exposure_mode": "Auto",
+    "white_balance": "Auto"
+  },
+  "gps_info": {
+    "latitude": 44.64127222222222,
+    "longitude": 93.1456,
+    "altitude_m": 279.0,
+    "img_direction": 98.40895813,
+    "h_positioning_error_m": 65.0
+  },
+  "image_info": {
+    "x_resolution": "72 dpi",
+    "y_resolution": "72 dpi",
+    "color_space": "Uncalibrated",
+    "scene_type": "Directly photographed",
+    "scene_capture_type": "Standard"
+  },
+  "datetime_info": {
+    "DateTime_Modified": "2020:03:06 17:12:19",
+    "DateTime_Original": "2020:03:06 17:12:19",
+    "DateTime_Digitized": "2020:03:06 17:12:19",
+    "Offset_Time": "-06:00",
+    "Offset_Time_Original": "-06:00",
+    "Offset_Time_Digitized": "-06:00"
+  },
+  "other_info": {
+    "JFIFVersion": "1.02",
+    "Tile Width": "512",
+    "Tile Length": "512",
+    "YCbCr Positioning": "Centered",
+    "Exif Version": "0231",
+    "Components Configuration": "Y, Cb, Cr, -",
+    "Subject Area": "2015 1511 2217 1330",
+    "Sub Sec Time Original": "614",
+    "Sub Sec Time Digitized": "614",
+    "Flashpix Version": "0100",
+    "Sensing Method": "One-chip color area",
+    "GPS Version ID": "2.3.0.0",
+    "GPS Altitude Ref": "Above Sea Level",
+    "GPS Speed Ref": "km/h",
+    "GPS Speed": "0",
+    "GPS Img Direction Ref": "True North",
+    "GPS Dest Bearing Ref": "True North",
+    "GPS Dest Bearing": "98.40895813",
+    "IPTCDigest": "d41d8cd98f00b204e9800998ecf8427e",
+    "XMPToolkit": "XMP Core 5.4.0",
+    "Creator Tool": "13.1.3",
+    "Camera ID": "72157664181907596",
+    "Camera Type": "Cameraphone"
+  },
+  "intrinsics": {
+    "fx": 3136.0,
+    "fy": 3528.0,
+    "cx": 2016.0,
+    "cy": 1512.0,
+    "image_width": 4032,
+    "image_height": 3024,
+    "focal_length_35mm": 28,
+    "matrix": [
+      [
+        3136.0,
+        0,
+        2016.0
+      ],
+      [
+        0,
+        3528.0,
+        1512.0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+	
+Apple iPhone 8
+iPhone 8 back camera 3.99mm f/1.8
+ƒ/1.8 4.0 mm 1/12 100 Flash (auto, did not fire) Hide EXIF
+JFIFVersion - 1.02
+X-Resolution - 72 dpi
+Y-Resolution - 72 dpi
+Make - Apple
+Software - 13.1.3
+Date and Time (Modified) - 2020:03:06 17:12:19
+Tile Width - 512
+Tile Length - 512
+YCbCr Positioning - Centered
+ISO Speed - 100
+Exif Version - 0231
+Date and Time (Original) - 2020:03:06 17:12:19
+Date and Time (Digitized) - 2020:03:06 17:12:19
+Offset Time - -06:00
+Offset Time Original - -06:00
+Offset Time Digitized - -06:00
+Components Configuration - Y, Cb, Cr, -
+Brightness Value - 0.6775324552
+Exposure Bias - 0 EV
+Metering Mode - Multi-segment
+Subject Area - 2015 1511 2217 1330
+Sub Sec Time Original - 614
+Sub Sec Time Digitized - 614
+Flashpix Version - 0100
+Color Space - Uncalibrated
+Sensing Method - One-chip color area
+Scene Type - Directly photographed
+Exposure Mode - Auto
+White Balance - Auto
+Focal Length (35mm format) - 28 mm
+Scene Capture Type - Standard
+Lens Info - 3.99mm f/1.8
+Lens Make - Apple
+Lens Model - iPhone 8 back camera 3.99mm f/1.8
+GPS Version ID - 2.3.0.0
+GPS Latitude Ref - North
+GPS Latitude - 44 deg 38' 28.58"
+GPS Longitude Ref - West
+GPS Longitude - 93 deg 8' 44.16"
+GPS Altitude Ref - Above Sea Level
+GPS Altitude - 279 m
+GPS Speed Ref - km/h
+GPS Speed - 0
+GPS Img Direction Ref - True North
+GPS Img Direction - 98.40895813
+GPS Dest Bearing Ref - True North
+GPS Dest Bearing - 98.40895813
+GPS HPositioning Error - 65 m
+IPTCDigest - d41d8cd98f00b204e9800998ecf8427e
+XMPToolkit - XMP Core 5.4.0
+Creator Tool - 13.1.3
+Camera ID - 72157664181907596
+Camera Type - Cameraphone

@@ -1,0 +1,41 @@
+{
+  "file_id": "49632490042_8393211035_o.jpg",
+  "camera": "Apple",
+  "focal_length_mm": 3.99,
+  "focal_length_35mm": 28,
+  "f_number": 8.0,
+  "iso": 100,
+  "exposure_time": null,
+  "gps": {
+    "latitude": 44.64127222222222,
+    "longitude": 93.1456,
+    "altitude_m": 279.0
+  },
+  "intrinsics": {
+    "fx": 3136.0,
+    "fy": 3528.0,
+    "cx": 2016.0,
+    "cy": 1512.0,
+    "image_width": 4032,
+    "image_height": 3024,
+    "focal_length_35mm": 28,
+    "matrix": [
+      [
+        3136.0,
+        0,
+        2016.0
+      ],
+      [
+        0,
+        3528.0,
+        1512.0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "timestamp": "2020:03:06 17:12:19"
+}

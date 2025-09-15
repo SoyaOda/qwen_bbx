@@ -1,0 +1,31 @@
+Total sessions: 511
+Train sessions: 357
+Val sessions: 76
+Test sessions: 78
+
+Sample sessions:
+Session 1: 29 dishes
+  dish_1562872150 (timestamp: 1562872150)
+  dish_1562872182 (timestamp: 1562872182)
+  dish_1562872223 (timestamp: 1562872223)
+  ... and 26 more
+Session 2: 5 dishes
+  dish_1562686492 (timestamp: 1562686492)
+  dish_1562686520 (timestamp: 1562686520)
+  dish_1562686548 (timestamp: 1562686548)
+  ... and 2 more
+Session 3: 4 dishes
+  dish_1564169197 (timestamp: 1564169197)
+  dish_1564169254 (timestamp: 1564169254)
+  dish_1564169298 (timestamp: 1564169298)
+  ... and 1 more
+Session 4: 9 dishes
+  dish_1560801773 (timestamp: 1560801773)
+  dish_1560801797 (timestamp: 1560801797)
+  dish_1560801829 (timestamp: 1560801829)
+  ... and 6 more
+Session 5: 7 dishes
+  dish_1563566626 (timestamp: 1563566626)
+  dish_1563566674 (timestamp: 1563566674)
+  dish_1563566725 (timestamp: 1563566725)
+  ... and 4 more
